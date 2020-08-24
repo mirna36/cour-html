@@ -127,8 +127,8 @@
 <h3>Les formulaires</h3>
 
 <!-- <form method="get"(les information name seront dans l'url donc attention au info qu'on ne veut pas que tout le monde voient) ou poste(les name ne seront pas dans url) action="address du fichier a envoyer">
-    <label for="">Nom</label>
-    <input type="text" name="nom">
+    <label for="Nom">Nom</label>
+    <input type="text" name="nom" placeholder="Ecrivez votre nom" id="Nom"> (Placeholder permet d'indiquer ce que l'on veut comme in)(for et id permet de lier le curseur )
     <br/>
     <label for="">Prénom</label>
     <input type="text" name="prenom"/>
@@ -140,14 +140,50 @@
 <hr/>
 </form> -->
 <form method="post" action="fichier.php">
-    <label for="">Nom</label>
-    <input type="text" name="nom">
+    <label for="Nom">Nom</label>
+    <input type="text" name="nom" placeholder="Ecrivez votre nom" id="Nom" value="Jonny">
     <br/>
-    <label for="">Prénom</label>
-    <input type="text" name="prenom"/>
+    <label for="prenom">Prénom</label>
+    <input type="text" name="prenom" placeholder="Ecrivez votre prenom" id="prenom"/>
     <br/>
-    <label for="">Age</label>
-    <input type="text" name="age"/><br/>
+    <label for="Age">Age</label>
+    <input type="number" name="age" placeholder="Ecriver votre age" id="Age"/><br/>
+
+    <div class="form-group">
+        <label>Votre nationalité</label>
+        <select name="nationality">
+            <optgroup label="Asie">
+                <option value="japon">Japon</option>
+                <option value="koweit">Koweit</option>
+                <option value="chine">Chine</option>
+            </optgroup>
+            <optgroup label="Afrique">
+                <option value="maroc">Maroc</option>
+                <option value="congo">Congo</option>
+                <option value="togo">Togo</option>
+            </optgroup>
+            <optgroup label="Amerique">
+                <option value="usa">Usa</option>
+                <option value="brasile">Brasile</option>
+                <option value="cuba">cuba</option>
+            </optgroup>
+        </select>
+
+    </div>
+
+    <div class="form-group">
+        <label for="email"> E-mail</label>
+        <input type="email" name="email" placeholder="E-mail" id="email">
+    </div>
+    <div class="form-group">
+        <label for="password"> Mot de passe</label>
+        <input type="password" name="password" placeholder="Mot de passe" id="password">
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message"  id="message" cols="30" rows="6" ></textarea>
+
+    </div>
     <input type="submit"/>
 </form>
 
