@@ -35,7 +35,7 @@
         Sit debitis atque autem quisquam. Voluptas consectetur quisquam ab soluta magnam provident ea assumenda excepturi sit veniam? Recusandae ratione, natus corporis est in laudantium corrupti vitae incidunt eum cupiditate alias. </p>
         <p id="findeparagraphe" style=color:red>Fin de paragraphe</p>
 
-        <h3>Les listes</h3>
+        <h2>Les listes</h2>
         <!-- <h4>Ceci est un titre H4</h4>
         <h5>Ceci est un titre H5</h5>
         <h6>Ceci est un titre H6</h6> (raccourci commentaire ctrl/)-->
@@ -100,31 +100,40 @@
            
         </ol>
         <hr/>
-
+<br/>
+<h2>Les liens</h2>
+<br/>
 <h3>Le lien externe: </h3>
+<br/>
 
         <a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal"> Lien vers le site de wikipedia</a> 
         <!-- a vas toujours de paire avec href jamais un a sans le href 
         lien absolu vers un site. -->
 <br/>
  <h3>Les liens interne:</h3> 
-
+ <br/>
 
             <a href="contact.html">Accédons aux contactes</a>
             <br/>
             <!-- lien ancre: -->
             <a href="#findeparagraphe"> Accédons à la fin de paragraphe</a>
-<hr/><br/>
-<h3>Les images</h3>
-<p>img va toujours avec src (source) et alt(description)</p>
+<hr/>
+<br/>
+<h2>Les images</h2>
+<br/>
+<h3>img va toujours avec src (source) et alt(description)</h3>
 
 <img src="images/chatons.jpg"alt="Des chatons"/>
 
+<br/>
 <h3>Image avec possibilité de lien</h3>
+<br/>
 
 <a href="contact.html"> <img src="images/chatons.jpg" alt="Des chatons"/></a>
+<br/>
 <hr/>
-<h3>Les formulaires</h3>
+<br/>
+<h2>Les formulaires</h2>
 
 <!-- <form method="get"(les information name seront dans l'url donc attention au info qu'on ne veut pas que tout le monde voient) ou poste(les name ne seront pas dans url) action="address du fichier a envoyer">
     <label for="Nom">Nom</label>
@@ -139,29 +148,32 @@
 
 <hr/>
 </form> -->
-<form method="post" action="fichier.php">
+<form method="post" action="fichier.php"><br/>
     <label for="Nom">Nom</label>
-    <input type="text" name="nom" placeholder="Ecrivez votre nom" id="Nom" value="Jonny">
+    <input type="text" name="nom" placeholder="Ecrivez votre nom" id="Nom" required/>
     <br/>
-    <label for="prenom">Prénom</label>
-    <input type="text" name="prenom" placeholder="Ecrivez votre prenom" id="prenom"/>
+    <br/><label for="prenom">Prénom</label>
+    <input type="text" name="prenom" placeholder="Ecrivez votre prenom" id="prenom" required/>
     <br/>
-    <label for="Age">Age</label>
-    <input type="number" name="age" placeholder="Ecriver votre age" id="Age"/><br/>
+    <br/><label for="Age">Age</label>
+    <input type="number" name="age" placeholder="Ecriver votre age" id="Age" required/><br/>
 
     <div class="form-group">
-        <label>Votre nationalité</label>
+        <br/><label>Votre nationalité</label>
         <select name="nationality">
+
             <optgroup label="Asie">
                 <option value="japon">Japon</option>
                 <option value="koweit">Koweit</option>
                 <option value="chine">Chine</option>
             </optgroup>
+
             <optgroup label="Afrique">
                 <option value="maroc">Maroc</option>
                 <option value="congo">Congo</option>
                 <option value="togo">Togo</option>
             </optgroup>
+
             <optgroup label="Amerique">
                 <option value="usa">Usa</option>
                 <option value="brasile">Brasile</option>
@@ -172,21 +184,359 @@
     </div>
 
     <div class="form-group">
-        <label for="email"> E-mail</label>
+        <br><label for="email"> E-mail</label>
         <input type="email" name="email" placeholder="E-mail" id="email">
     </div>
+
     <div class="form-group">
-        <label for="password"> Mot de passe</label>
+       <br/> <label for="password"> Mot de passe</label>
         <input type="password" name="password" placeholder="Mot de passe" id="password">
     </div>
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea name="message"  id="message" cols="30" rows="6" ></textarea>
 
+    <div class="form-group">
+        <br/><label for="message">Message</label>
+        <textarea name="message"  id="message" cols="30" rows="6" ></textarea>
     </div>
+
+    <br/>
     <input type="submit" name="envoyer"/>
 </form>
 
+<!-- <P>Securiser un champs de formulaire</P>(pour obliger l'utilisateur a remplir un champs) 
+dans imput on met require-->
+<br/>
+
+<hr>
+<br/>
+<br/>
+
+<h2>Le fieldset = cadre nommé</h2>
+<br/>
+
+    <form action="fichier.php" method="post">
+        <fieldset>
+            <legend>Informations principales</legend>
+                <div class="form-groupe">
+                <br/><label>Votre nationalité</label>
+            
+             <select name="Nationalité">
+                 <optgroup label="Europe">
+                     <option value="France">France</option>
+                     <option value="Allemagne">Allemengne</option>
+                     <option value="Espagne">Espagne</option>
+                 </optgroup>
+
+                 <optgroup label="Afrique">
+                    <option value="Congo">Congo</option>
+                    <option value="Afrique du Sud">Afrique du sud</option>
+                    <option value="Angola">Angola</option>
+                </optgroup>
+
+                <optgroup label="Asie">
+                    <option value="Chine">Chine</option>
+                    <option value="Japon">Japon</option>
+                    <option value="Corée du Sud">Corée du Sud</option>
+                </optgroup>
+
+                <optgroup label="Amerique">
+                    <option value="Usa">USA</option>
+                    <option value="cuba">Cuba</option>
+                    <option value="Brasile">Brasile</option>
+                </optgroup>
+                </select>
+
+         <br/>  
+         <div class="form-group">
+        <br/><label for="nom">NOM</label>
+        <input type="text" name="nom" placeholder="Entrez votre nom" id="nom">
+        <br/>
+        <br/><label for="prenom">PRENOM</label>
+        <input type="text" name="prenom" placeholder="Entrez votre Prénom" id="prenom">
+        <br/>
+        <br/><label for="age">Age</label>
+        <input type="number" name="age" placeholder="Entrez votre age" id="age">
+        
+         </div>
+        </fieldset>
+   
+
+<fieldset>
+    <legend>Hobbies</legend>
+    <p>Qu'aimez vous faire pour passer le temps?</p>
+    
+    <input type="radio" name="Hobbises" id="Sport"><label for="sport">Sport</label><br/>
+    <input type="radio" name="Hobbises" id="lecture"><label for="lecture">Lecturet</label><br/>
+    <input type="radio" name="Hobbises" id="Sport"><label for="voyage">Voyage</label>
+
+</fieldset>
+
+<fieldset>
+    <legend>Plats préferés</legend>
+    <input type="checkbox" name="plats []"> <label for="PIZZA">PIZZA</label><br/>
+    <input type="checkbox" name="plats []"> <label for="PATE">PATE</label><br/>
+    <input type="checkbox" name="plats []"> <label for="KEBAB">KEBAB</label><br/>
+</fieldset>
+<br/>
+<button type="submit">Valider</button>
+    </form>
+    <br/>
+    <hr>
+    <br/>
+    <h2>Les Tableaux</h2>
+    <!-- elment adapté = table 
+    -->
+    <br/>
+<h4>Tableau</h4>
+
+<table> <!--Tableau-->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <thead> <!--Entête du tableau -->
+        <tr>    <!--tbale row =ligne -->
+            <th>NOM </th> 
+            <th>Prénom</th>
+            <th>Age</th>
+            
+            
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr>
+            
+            <td>DUPOND</td> <!--table data-->
+            <td>Franck</td>
+            <td>39</td>
+        </tr>
+        <tr>
+            <td>TOMSOM</td>
+            <td>Janne</td>
+            <td>58</td>
+
+        </tr>
+        <tr>
+            <td>TIVARD</td>
+            <td>Marc</td>
+            <td>60</td>
+
+        </tr>
+        <tr>
+            <td>TOM</td>
+            <td>Vannette</td>
+            <td>28</td>
+
+        </tr>
+        <tr>
+            <td>TIM</td>
+            <td>GAN</td>
+            <td>65</td>
+
+        </tr>
+
+    </tbody>
+
+    <tfoot>
+        <tr>    <!--on remet l'entête au cas ou le tableau est long -->
+            <th>NOM</th>  
+            <th>PRENOM</th>
+            <th>Age</th>
+        </tr>
+
+    </tfoot>
+
+</table>
+
+
+
+<h4>Tableau 2 COLSPAN</h4>
+    <table> <!-- colspan partage une column en 2 S'applique sur le body --> 
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th{
+                background:grey;
+            }
+        </style>
+        <thead> <!--Entête du tableau -->
+            <tr>    <!--tbale row =ligne -->
+                <th colspan="2">NOM et Prenom </th> <!--table column, colspan partage une column en 2 et rowspan--> 
+                <th>Age</th>
+                
+                
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                
+                <td>DUPOND</td> <!--table data-->
+                <td>Franck</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td>TOMSOM</td>
+                <td>Janne</td>
+                <td>58</td>
+
+            </tr>
+            <tr>
+                <td>TIVARD</td>
+                <td>Marc</td>
+                <td>60</td>
+
+            </tr>
+            <tr>
+                <td>TOM</td>
+                <td>Vannette</td>
+                <td>28</td>
+
+            </tr>
+            <tr>
+                <td>TIM</td>
+                <td>GAN</td>
+                <td>65</td>
+
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>    <!--on remet l'entête au cas ou le tableau est long -->
+                <th>NOM</th>  
+                <th>PRENOM</th>
+                <th>Age</th>
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+    <br/>
+
+<h4>Table 3 ROWSPAN</h4>
+<table>
+    
+    <thead> <!--Entête du tableau -->
+        <tr>    <!--tbale row =ligne -->
+            <th>NOM</th> <!--Le rowspan partage une ligne --> 
+            <th>Prénom</th>
+            <th>Age</th>
+        </tr>    
+        
+
+
+    </thead>
+    <tbody>
+        <tr>
+            
+            <td rowspan="2">DUPOND</td> <!--table data-->
+            <td>Franck</td>
+            <td>39</td>
+        </tr>
+
+        <tr>
+        
+            <td>Janne</td>
+            <td>58</td>
+
+        </tr>
+        <tr>
+            <td>TIVARD</td>
+            <td>Marc</td>
+            <td>60</td>
+
+        </tr>
+        <tr>
+            <td>TOM</td>
+            <td>Vannette</td>
+            <td>28</td>
+
+        </tr>
+        <tr>
+            <td>TIM</td>
+            <td>GAN</td>
+            <td>65</td>
+
+        </tr>
+
+    </tbody>
+
+
+
+</table>
+<br/>
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Attaquans</th>
+            <th colspan="2">Milieux de terreain</th>
+            <th colspan="2">Défenseurs</th>
+            <th>Gardiens</th>
+        </tr>
+        <tr>
+            <th>M.Attaquant</th>
+            <th>M.Attaquant2</th>
+            <th>M.Offensifs</th>
+            <th>M.Défensif</th>
+            <th>Def. centreux</th>
+            <th>Def Latéreaux</th>
+            <th>...</th>
+        </tr>
+        
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Olivier Giroux</td>
+            <td>Kylian Mbappe</td>
+            <td>Nabil Fekir</td>
+            <td>Paul Pogba</td>
+            <td>Smuel Umiti</td>
+            <td>Lucas Hernandez</td>
+            <td>Steve Mandanda</td>
+        </tr>
+        <tr>
+            <td>Ben Yedder</td>
+            <td>Oussmane Dembele</td>
+            <td>Antoine Griezmann</td>
+            <td>Ngolo Kanté</td>
+            <td>Rafael Varane</td>
+            <td>Benjamin Pavard</td>
+            <td>Hugo Lloris</td>
+        </tr>
+
+
+    </tbody>
+</table>
+
+    
+    <br/>
+    <hr/>
+
+    <h2>Audio et Vidéo</h2>
+    <br/>
+    <audio controls="controls" loop="loop">
+        <source src="" type="audio/mp3"/>
+        <source src="" type="audio/ogg"/>
+    </audio>
+    <vidio width="400" heigt="200" controls="controls">
+        <source src="" type="audio/mp4"/>
+        <source src="" type="audio/ogg"/>
+
+    </vidio>
+    <br/>
+    <hr>
+    <br/>
+    <h2>Arbre Généalogique</h2>
 
     </body>
+
 </html>
+
+
